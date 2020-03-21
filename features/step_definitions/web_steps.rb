@@ -106,6 +106,13 @@ When /^(?:|I )fill in the following:$/ do |fields|
   end
 end
 
+Given /^a category is created$/ do
+  Category.create!({name: "engineering",
+                    keywords: "software",
+                    permalink: "englink",
+                    description: "all of engineering"})
+end
+
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end

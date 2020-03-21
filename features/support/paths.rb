@@ -23,6 +23,12 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+    
+    when /^the new categories page$/
+      '/admin/categories/new'
+
+    when/^the category edit page for \"(.*)\"$/
+      "/admin/categories/edit/#{Category.find_by_name($1).id}"
 
     else
       begin
