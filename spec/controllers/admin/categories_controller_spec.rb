@@ -21,8 +21,7 @@ describe Admin::CategoriesController do
     it 'should render template new' do
       get :new
       assert_template 'new'
-      assert_tag :tag => "table",
-        :attributes => { :id => "category_container" }
+      assert_tag :tag => "table", :attributes => { :id => "category_container" }
     end
 
     it 'should create a valid category' do
